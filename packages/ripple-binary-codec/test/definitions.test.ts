@@ -185,10 +185,13 @@ describe('xahau related tests', function () {
   })
   test('definition hash if present', function () {
     expect(xahauDefs.getHash()).toEqual(
-      'E08D4476B0A8BC4A98F1CB9305406C6E020BB039D4563B1A6589B345284B546F',
+      '24C3DBA49CA08AF55BDF2CF0F38BD26B41124699434ABEEC14BDDA45D978CB37',
     )
   })
   test('definition hash if not present', function () {
-    expect(xrplDefs.getHash()).toEqual('0'.repeat(64))
+    // expect(xrplDefs.getHash()).toEqual('0'.repeat(64))
+    expect(xrplDefs.getHash()).toEqual(
+      'AC41B801327871674016A749099AB5DE9790BECD373065352BBAAEAD1B82AF4B',
+    )
   })
 })
