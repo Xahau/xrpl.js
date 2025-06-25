@@ -3206,10 +3206,9 @@
       "supported": true
     },
     "9000B5F96F9E129D1CB42F2B07AF4CEFEFBFDF49CFCD8B6FF46E719A3F19B436": {
-      "enabled": false,
+      "enabled": true,
       "name": "HookCanEmit",
-      "supported": true,
-      "vetoed": true
+      "supported": true
     },
     "919857E4B902A20216E4819B9BD9FD1FD19A66ECF63151C18A4C48C873DB9578": {
       "enabled": true,
@@ -3222,10 +3221,9 @@
       "supported": true
     },
     "94312150FFBA0E21B46244D7C4C6D66219C53C5F82FB7949F0832A6B56FB9631": {
-      "enabled": false,
+      "enabled": true,
       "name": "Touch",
-      "supported": true,
-      "vetoed": true
+      "supported": true
     },
     "955DF3FA5891195A9DAEFA1DDC6BB244B545DDE1BAA84CBB25D5F12A8DA68A0C": {
       "enabled": true,
@@ -3350,10 +3348,9 @@
       "supported": true
     },
     "FA4E4881FDB038DCD8D7DFD850A304546E0B2844CACC3AB97CA41136A03E49F5": {
-      "enabled": false,
+      "enabled": true,
       "name": "Remarks",
-      "supported": true,
-      "vetoed": true
+      "supported": true
     },
     "FBD513F1B893AC765B78F250E6FFA6A11B573209D1842ADC787C850696741288": {
       "enabled": true,
@@ -3361,7 +3358,7 @@
       "supported": true
     }
   },
-  "hash": "E08D4476B0A8BC4A98F1CB9305406C6E020BB039D4563B1A6589B345284B546F",
+  "hash": "24C3DBA49CA08AF55BDF2CF0F38BD26B41124699434ABEEC14BDDA45D978CB37",
   "native_currency_code": "XAH",
   "status": "success"
 }
