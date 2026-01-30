@@ -116,14 +116,27 @@ class STObject extends SerializedType {
       return Object.assign(acc, handled ?? { [key]: val })
     }, {})
 
-    let sorted = Object.keys(xAddressDecoded)
-      .map((f: string): FieldInstance => definitions.field[f] as FieldInstance)
-      .filter(
-        (f: FieldInstance): boolean =>
-          f !== undefined &&
-          xAddressDecoded[f.name] !== undefined &&
-          f.isSerialized,
+    function isValidFieldInstance(
+      f: FieldInstance | undefined,
+    ): f is FieldInstance {
+      return (
+        f !== undefined &&
+        xAddressDecoded[f.name] !== undefined &&
+        f.isSerialized
       )
+    }
+
+    let sorted = Object.keys(xAddressDecoded)
+      .map((f: string): FieldInstance | undefined => {
+        if (!(f in definitions.field)) {
+          if (f[0] === f[0].toLowerCase()) return undefined
+          // throw new Error(`Field ${f} is not defined in the definitions`)
+          // ^^ we need to disable to allow for non existing fields without error (devs...)
+          // And we need that for signin
+        }
+        return definitions.field[f] as FieldInstance
+      })
+      .filter(isValidFieldInstance)
       .sort((a, b) => {
         return a.ordinal - b.ordinal
       })
