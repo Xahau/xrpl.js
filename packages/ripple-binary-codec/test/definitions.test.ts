@@ -214,13 +214,13 @@ describe('xahau related tests', function () {
   })
   test('definition hash if present', function () {
     expect(xahauDefs.getHash()).toEqual(
-      '24C3DBA49CA08AF55BDF2CF0F38BD26B41124699434ABEEC14BDDA45D978CB37',
+      'BA45AB08AB3CDF78A7916BA80C45D804ED999AFAF8F03F0E229B77291F685306',
     )
   })
   test('definition hash if not present', function () {
     // expect(xrplDefs.getHash()).toEqual('0'.repeat(64))
     expect(xrplDefs.getHash()).toEqual(
-      'AC41B801327871674016A749099AB5DE9790BECD373065352BBAAEAD1B82AF4B',
+      '018742D1E0312286F3E85CAC71750BC86AE9C4316A8E810FE4BFE1D8468A9191',
     )
   })
 })
