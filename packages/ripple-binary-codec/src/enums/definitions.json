@@ -3739,7 +3739,8 @@
     "XChainCommit": 42,
     "XChainCreateBridge": 48,
     "XChainCreateClaimID": 41,
-    "XChainModifyBridge": 47
+    "XChainModifyBridge": 47,
+    "SignIn": 999
   },
   "TYPES": {
     "AccountID": 8,

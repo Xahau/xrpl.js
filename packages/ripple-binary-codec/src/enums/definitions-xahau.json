@@ -2968,7 +2968,8 @@
     "URITokenBuy": 47,
     "URITokenCancelSellOffer": 49,
     "URITokenCreateSellOffer": 48,
-    "URITokenMint": 45
+    "URITokenMint": 45,
+    "SignIn": 999
   },
   "TYPES": {
     "AccountID": 8,
