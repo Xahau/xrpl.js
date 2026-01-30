@@ -130,7 +130,9 @@ class STObject extends SerializedType {
       .map((f: string): FieldInstance | undefined => {
         if (!(f in definitions.field)) {
           if (f[0] === f[0].toLowerCase()) return undefined
-          throw new Error(`Field ${f} is not defined in the definitions`)
+          // throw new Error(`Field ${f} is not defined in the definitions`)
+          // ^^ we need to disable to allow for non existing fields without error (devs...)
+          // And we need that for signin
         }
         return definitions.field[f] as FieldInstance
       })
@@ -148,10 +150,10 @@ class STObject extends SerializedType {
         field.type.name === ST_OBJECT
           ? this.from(xAddressDecoded[field.name], undefined, definitions)
           : field.type.name === 'STArray'
-            ? STArray.from(xAddressDecoded[field.name], definitions)
-            : field.type.name === 'UInt64'
-              ? UInt64.from(xAddressDecoded[field.name], field.name)
-              : field.associatedType.from(xAddressDecoded[field.name])
+          ? STArray.from(xAddressDecoded[field.name], definitions)
+          : field.type.name === 'UInt64'
+          ? UInt64.from(xAddressDecoded[field.name], field.name)
+          : field.associatedType.from(xAddressDecoded[field.name])
 
       if (associatedValue == undefined) {
         throw new TypeError(

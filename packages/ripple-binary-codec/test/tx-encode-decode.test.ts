@@ -117,12 +117,13 @@ describe('encoding and decoding tx_json', function () {
     }).toThrow()
   })
 
-  it('throws when there is an unknown field', function () {
-    const my_tx = Object.assign({}, tx_json, {
-      BadField: 1,
-    })
-    expect(() => {
-      encode(my_tx)
-    }).toThrow()
-  })
+  // it('throws when there is an unknown field', function () {
+  //   const my_tx = Object.assign({}, tx_json, {
+  //     BadField: 1,
+  //   })
+  //   expect(() => {
+  //     encode(my_tx)
+  //   }).toThrow()
+  // })
+  // ^^ no we allow this
 })
